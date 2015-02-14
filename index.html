@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="randomFlight">
+	<head>
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+	</head>
+	<body ng-controller="AirportController as airport">
+		<div ng-repeat="airport in airport.airports">
+			<h1>{{airport.fs}}</h1>
+			<h2>{{airport.name}}</h2>
+			<p>{{airport.city + ', ' + airport.countryName}}</p>
+		</div>
+		<script type="text/javascript" src="lib/js/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+	</body>
+</html>
