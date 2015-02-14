@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html ng-app="randomFlight">
-	<head>
-		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
-	</head>
-	<body ng-controller="AirportController as airport">
-		<div ng-repeat="airport in airport.airports">
-			<h1>{{airport.fs}}</h1>
-			<h2>{{airport.name}}</h2>
-			<p>{{airport.city + ', ' + airport.countryName}}</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Random Destination Finder</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+    <link href="css/main.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Random Destination Finder</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Where you are flying from?</h2>
+        <input type="text" class="form-control" placeholder="Start typing airport code/name...">
+		<h2>How far are you willing to fly?</h2>
+		<div class="input-group">
+			<input type="number" class="form-control" placeholder="Radius in miles..." aria-describedby="miles-addon">
+			<span class="input-group-addon" id="miles-addon">miles</span>
 		</div>
+		<button id="submit-button" type="submit" class="btn btn-primary">Find my destination!</button>
+      </div>
+
+      <div class="row marketing">
+		<div class="text-center header">
+			<h2>Washington, DC</h2>
+		</div>
+        <div class="col-lg-6">
+
+          <h4>Airport Name</h4>
+          <p>Ronald Reagan National Airport</p>
+		  
+		  <h4>Airport Code</h4>
+          <p>DCA</p>
+		  
+		  <h4>Airport Classification<span class="glyphicon glyphicon-info-sign aria-hidden="true"></span></h4>
+		  <p>4</p>
+		  
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Distance from origin</h4>
+          <p>375 miles</p>
+
+          <h4>Country</h4>
+          <p>United States</p>
+
+          <h4>How excited you should be</h4>
+          <p>Extremely</p>
+		  
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Dashef 2015</p>
+      </footer>
+
+    </div> 
 		<script type="text/javascript" src="lib/js/angular.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
-	</body>
+  </body>
 </html>
