@@ -2,7 +2,10 @@
 function getRandomAirport(originAirport, maxMilesFromOrigin) {
     $.ajax({
         method: 'POST',
-        url: 'https://7cmtdypzk5.execute-api.us-east-1.amazonaws.com/Dev' + '/airport',
+        url: airportUrl,
+        headers: {
+            'x-api-key': apiKey
+        },
         data: JSON.stringify({
             origin: originAirport,
             maxMilesFromOrigin: maxMilesFromOrigin
