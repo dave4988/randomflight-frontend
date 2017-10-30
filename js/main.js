@@ -23,10 +23,10 @@ function getRandomAirport(originAirport, maxMilesFromOrigin) {
 function completeRequest(result) {
     console.log('result: ', result);
     $("#airport-result").removeClass("hidden");
-    $("#destination").text(result.City + ", " + result.State + ", " + result.Country + "!!!!!");
+    $("#destination").text(result.City + ", " + result.State + ", " + result.Country + "!");
     $("#airport-name").text(result.AirportName);
     $("#airport-code").text(result.AirportCode);
     $("#airport-classification").text(result.Classification);
-    $("#airport-country").text(result.Classification);
+    $("#airport-country").text(result.Country);
     //alert('Response received from API: ' + result.AirportName);
 }
