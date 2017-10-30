@@ -29,21 +29,24 @@
       </div>
 
       <div class="jumbotron">
-		<p>
-        <h2>Where you are flying from?</h2>
-        <input id="origin" type="text" class="form-control" placeholder="Start typing airport code/name...">
-		<p>
-		<h2>How far are you willing to fly?</h2>
-		<p>
-		<div class="input-group">
-			<input id="radius" type="number" class="form-control" placeholder="Radius in miles..." aria-describedby="miles-addon">
-			<span class="input-group-addon" id="miles-addon">miles</span>
-		</div>
-		</p>
-		<button id="submit-button" type="submit" onclick="getRandomAirport($('#origin').val(),$('#radius').val())" class="btn btn-primary">Find my destination!</button>
+    		<p>
+            <h2>Where you are flying from?</h2>
+            <input id="origin" type="text" class="form-control" placeholder="Start typing airport code/name...">
+    		<p>
+    		<h2>How far are you willing to fly?</h2>
+    		<p>
+    		<div class="input-group">
+    			<input id="radius" type="number" class="form-control" placeholder="Radius in miles..." aria-describedby="miles-addon">
+    			<span class="input-group-addon" id="miles-addon">miles</span>
+    		</div>
+    		</p>
+    		<button id="submit-button" type="submit" onclick="getRandomAirport($('#origin').val(),$('#radius').val())" class="btn btn-primary">Find my destination!</button>
       </div>
 
+
+    <img  id="loading-gif" class="img-responsive center-block hidden" src="img/loading.gif" />
     <div class="row marketing hidden" id="airport-result">
+
   		<div class="text-center header">
         <p>You're going to...</p>
   			<h2 id="destination"></h2>

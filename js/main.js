@@ -1,5 +1,7 @@
 
 function getRandomAirport(originAirport, maxMilesFromOrigin) {
+    $("#loading-gif").removeClass("hidden");
+    $("#airport-result").addClass("hidden");
     $.ajax({
         method: 'POST',
         url: airportUrl,
@@ -13,6 +15,7 @@ function getRandomAirport(originAirport, maxMilesFromOrigin) {
         contentType: 'application/json',
         success: completeRequest,
         error: function ajaxError(jqXHR, textStatus, errorThrown) {
+            $("#loading-gif").addClass("hidden");
             console.error('Error getting destination: ', textStatus, ', Details: ', errorThrown);
             console.error('Response: ', jqXHR.responseText);
             alert('An error occured when finding your destination:\n' + jqXHR.responseText);
@@ -22,6 +25,7 @@ function getRandomAirport(originAirport, maxMilesFromOrigin) {
 
 function completeRequest(result) {
     console.log('result: ', result);
+    $("#loading-gif").addClass("hidden");
     $("#airport-result").removeClass("hidden");
     $("#destination").text(result.City + ", " + result.State + ", " + result.Country + "!");
     $("#airport-name").text(result.AirportName);
