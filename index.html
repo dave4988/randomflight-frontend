@@ -43,40 +43,40 @@
 		<button id="submit-button" type="submit" onclick="getRandomAirport($('#origin').val(),$('#radius').val())" class="btn btn-primary">Find my destination!</button>
       </div>
 
-      <div class="row marketing">
-		<div class="text-center header">
-			<h2>Washington, DC</h2>
-		</div>
-		
-        <div class="col-lg-6">
-          <h4>Airport Name</h4>
-          <p>Ronald Reagan National Airport</p>
-		  
-		  <h4>Airport Code</h4>
-          <p>DCA</p>
-		  
-		  <h4>Airport Classification<span class="glyphicon glyphicon-info-sign aria-hidden="true"></span></h4>
-		  <p>4</p>
+    <div class="row marketing hidden" id="result">
+  		<div class="text-center header">
+  			<h2 id="destination">Washington, DC</h2>
+  		</div>
+  		
+          <div class="col-lg-6">
+            <h4>Airport Name</h4>
+            <p id="airport-name"></p>
+  		  
+  		  <h4>Airport Code</h4>
+            <p id="airport-code"></p>
+  		  
+  		  <h4>Airport Classification<span class="glyphicon glyphicon-info-sign aria-hidden="true"></span></h4>
+  		  <p id="airport-classification"></p>
+          </div>
+
+          <div class="col-lg-6">
+            <h4>Distance from origin</h4>
+            <p id="distance-from-origin">//TODO</p>
+
+            <h4>Country</h4>
+            <p id="airport-country"></p>
+
+            <h4>How excited you should be</h4>
+            <p id="excitement-level"></p>
+  		  
+          </div>
         </div>
 
-        <div class="col-lg-6">
-          <h4>Distance from origin</h4>
-          <p>375 miles</p>
+        <footer class="footer">
+          <p>&copy; Dave Allen 2017</p>
+        </footer>
 
-          <h4>Country</h4>
-          <p>United States</p>
 
-          <h4>How excited you should be</h4>
-          <p>Extremely</p>
-		  
-        </div>
-      </div>
-
-      <footer class="footer">
-        <p>&copy; Dave Allen 2017</p>
-      </footer>
-
-    </div> 
 
   </body>
 </html>
