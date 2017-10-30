@@ -22,7 +22,7 @@ function getRandomAirport(originAirport, maxMilesFromOrigin) {
 
 function completeRequest(result) {
     console.log('result: ', result);
-    $("#result").removeClass("hidden");
+    $("#airport-result").removeClass("hidden");
     $("#destination").val(result.City + ", " + result.State + ", " + result.Country + "!!!!!");
     $("#airport-name").val(result.AirportName);
     $("#airport-code").val(result.AirportCode);
